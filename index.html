@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Ronin Wallet – Install, Login & Use Safely</title>
+  <meta name="description" content="Discover how to install, use, and recover your Ronin Wallet. Secure, simple, and built for smooth asset management. Learn about the login and download process here.">
+  <link rel="icon" type="image/x-icon" href="fav.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #0e1116;
+    font-family: "Roboto", serif;
+    font-size: 14px;
+    color:#fff;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 2.4rem;
+}
+h3,h4,h2{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+p strong{
+    font-weight: 300;
+    color:#fff;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+}
+p,a{
+    font-family: "Roboto", serif;
+    font-size: 19px;
+    color: #fff;
+
+}
+a{
+    color: #136aec;
+    text-decoration: none;
+}
+p a{
+    font-weight: bold;
+}
+p a:hover{
+    color: #c5c5c5;
+}
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.tremsbgtext ul{
+position: relative;
+list-style: none;
+text-decoration: none;
+margin: 0;
+padding: 0;
+margin-bottom: 1rem;
+}
+.tremsbgtext ul li {
+position: relative;
+font-size: 16px;
+margin-bottom: 10px;
+padding-left: 22px;
+}
+.tremsbgtext ul li::before {
+content: "";
+position: absolute;
+left: 0;
+top: 9px;
+width: 10px;
+height: 10px;
+background: #136aec;
+border-radius: 50%;
+}
+
+.buttoncustom{
+    background: #136aec;
+    color: #fff;
+    border: 0px;
+    padding: 1rem 1rem;
+    font-size: 20px;
+    border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+}
+.buttoncustom:hover{
+    background: #1561d4;
+}
+
+.error {
+    display: block;
+    width: 100%;
+    color: #c73f3f;
+    padding-top: 12px;
+  }
+  
+img{
+    max-width: 100%;
+    /* border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px; */
+/* box-shadow: -17px 18px 0px 0px rgba(87,194,194,0.75);
+-webkit-box-shadow: -17px 18px 0px 0px rgba(87,194,194,0.75);
+-moz-box-shadow: -17px 18px 0px 0px rgba(87,194,194,0.75); */
+position: relative;
+/* display: inline-block;
+margin: 1rem 0rem;
+margin-bottom: 2.5rem; */
+/* border: 2px solid #000; */
+}
+  #message {
+    color: #699d59;
+    font-size: 20px;
+    padding-bottom: 1rem;
+  }
+  .contactbgmin{
+
+  }
+.contactbgmin .form-group{
+margin-bottom: 1rem;
+}
+.contactbgmin .form-group textarea{
+    padding: 20px;
+}
+.contactbgmin .form-group input {
+    height: 60px;
+    padding: 0px 20px;
+}
+.copyrightbg{
+    position: relative;
+    text-align: center;
+    background: #136aec;
+}
+.copyrightbg p{
+    color: #ffffff;
+    margin: 0;
+    padding: 1rem 0rem;
+}
+
+section{
+    width: 100%;
+    display: block;
+}
+.btnfrom{
+    background: #136aec;
+    color: #ffffff;
+    display: inline-block;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+border-bottom: 8px solid #136aec;
+margin-bottom: 1rem;
+}
+.btnfrom:hover{
+    background: #378ace;
+    color: #e6ffe9;
+}
+
+.top_logo{
+    width: auto;
+    position: relative;
+    margin: 0;
+    padding: 1rem 0rem;
+    color: #136aec;
+    font-weight: bold;
+}
+.top_logo img{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background: #f7f7f7;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.05);
+    padding: 0.5rem 0rem;
+    border-bottom: 1px solid #e3e3e3;
+}
+.accordion-button:not(.collapsed) {
+    background: #136aec;
+    box-shadow: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+}
+.accordion-button {
+    font-size: 21px;
+    font-weight: 500;
+}
+.accordion-body {
+    font-size: 18px;
+}
+
+
+.btnstyle{
+    padding: 10px 20px;
+    border-radius: 7px;
+    display: inline-block;
+    margin: 2rem 0rem;
+    background: #136aec;
+    color: #fff;
+}
+.btnstyle:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px) {
+    h1{
+        font-size: 1.5rem;
+    }
+    h3,h4,h2{
+        font-size: 1.2rem;
+    }
+    p strong{
+        font-size: 1.2rem;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+</style>
+<body>
+
+
+<section>
+    <img src="images/ronintop.png" alt="ronin login">
+<div class="container tremsbgtext">   
+<div class="row">   
+<div class="col-md-12 mt-5 mb-2">  
+    <div class="w-100 text-center">
+        <a class="btnstyle" href="/">Download Ronin Wallet</a>
+    </div>
+    <h1>
+        Ronin Wallet – Download and Use on Windows, Mac, Android, iOS, and Extension
+    </h1>
+    <p>
+        Your digital assets deserve more than just access—they deserve smart,
+        streamlined security. That’s where <strong>Ronin</strong>steps in. Designed
+        specifically for seamless interaction with the Ronin ecosystem, this wallet
+        keeps your assets within arm’s reach while maintaining robust control over
+        your access points. If you're wondering <em>what is Ronin</em>and why it
+        might be right for you, you're in the perfect place to find out.
+    </p>
+    <h2>
+        What is Ronin Wallet?
+    </h2>
+    <p>
+        <strong>Ronin Wallet</strong> is a browser extension and mobile application
+        that acts as the bridge to access decentralized applications (dApps) on the
+        Ronin blockchain. Think of it as your secure portal—offering complete
+        management of assets, fast transactions, and user-centric features, all
+        wrapped into a lightweight interface. Whether you’re minting assets,
+        managing transactions, or engaging with dApps, the Ronin Wallet makes sure
+        you can do so efficiently and securely.
+    </p>
+    <p>
+        Built with speed and simplicity in mind, it eliminates unnecessary clutter
+        and puts the focus on you and your actions.
+    </p>
+    <h2>
+        How to Set Up Ronin?
+    </h2>
+    <p>
+        Setting up <strong>Ronin</strong>takes just a few minutes, whether you're on
+        desktop or mobile. Here’s how to get started:
+    </p>
+    <p>
+        1. Visit the official Ronin Wallet site.
+    </p>
+    <p>
+        2. Choose your preferred platform:
+    </p>
+    <p>
+        o For desktop: Click <strong>“Download Extension”</strong> to install it on
+        Chrome or Firefox.
+    </p>
+    <p>
+        o For mobile: Click on the respective <strong>App Store</strong> or <strong>
+        Google Play</strong> links for direct <strong>Ronin Wallet download</strong>
+        .
+    </p>
+    <p>
+        3. Once installed, open the Ronin Wallet app or extension.
+    </p>
+    <p>
+        4. Select <strong>“Create a New Wallet”</strong> or
+        <strong>
+            “Import using Seed Phrase”
+        </strong>
+        if you're restoring access.
+    </p>
+    <p>
+        5. Create a secure password and back up your recovery phrase. Write it
+        down—don’t save it digitally.
+    </p>
+    <p>
+        6. After confirming your phrase, your <strong>Ronin Wallet login</strong>
+        setup is complete.
+    </p>
+    <p>
+        Congratulations, you’re now set to explore the full capabilities of the
+        <strong>wallet Ronin</strong> has crafted.
+    </p>
+    <h2>
+        Is Ronin Safe?
+    </h2>
+    <p>
+        Yes, the design of the <strong>Ronin</strong>is rooted in safety-first
+        practices. Private keys and personal recovery phrases are stored locally on
+        your device, meaning you're in full control—no centralized servers holding
+        your sensitive data. The <strong>Ronin</strong>
+        <strong>
+            wallet extension
+        </strong>
+        never transmits your secret phrase or private keys, keeping everything
+        secure on your end.
+    </p>
+    <p>
+        Plus, with secure transaction signing and password protection, every
+        interaction through the wallet is safeguarded by layers of user-focused
+        security protocols.
+    </p>
+    <img class="w-100" src="images/roninabout.jpg" alt="ronin about">
+    <div class="w-100 text-center">
+        <a class="btnstyle" href="/">View All Ronin Wallet</a>
+    </div>
+    <h2>
+        What Can I Do With Ronin?
+    </h2>
+    <p>
+        Once your wallet is set up, the possibilities within the
+        <strong>
+            Ronin ecosystem
+        </strong>
+        are at your fingertips. You can:
+    </p>
+    <ul>
+        <li>
+            Send and receive assets instantly
+        </li>
+        <li>
+            Interact with decentralized apps native to Ronin
+        </li>
+        <li>
+            Monitor your activity and transaction history
+        </li>
+        <li>
+            Manage multiple addresses and track balances
+        </li>
+        <li>
+            Approve or reject transaction requests securely
+        </li>
+    </ul>
+    <p>
+        The user interface is intuitive, making it simple for both newcomers and
+        experienced users to navigate.
+    </p>
+    <h2>
+        Can I Use Ronin Without the Extension?
+    </h2>
+    <p>
+        While the <strong>Ronin extension</strong> is the most popular access point
+        for desktop users, mobile users are fully supported via the official Ronin
+        Wallet app. However, you do need to install either the extension or the
+        mobile app to use it—there is no web-only version of
+        <strong>
+            wallet Ronin
+        </strong>
+        available without one of these tools.
+    </p>
+    <p>
+        This ensures a consistent and secure experience across platforms.
+    </p>
+    <h2>
+        How Do I Recover My Wallet?
+    </h2>
+    <p>
+        Lost access? No problem—as long as you backed up your secret phrase during
+        setup, you’re good to go.
+    </p>
+    <p>
+        To recover:
+    </p>
+    <p>
+        1. Install the <strong>wallet</strong> app or extension again.
+    </p>
+    <p>
+        2. Open the wallet and select <strong>“Import Wallet”</strong>.
+    </p>
+    <p>
+        3. Enter your 12-word recovery phrase exactly as it was given.
+    </p>
+    <p>
+        4. Create a new password.
+    </p>
+    <p>
+        5. That’s it—your wallet is restored.
+    </p>
+    <p>
+        Always remember: never share your recovery phrase with anyone. No Ronin team
+        member or service will ever ask for it.
+    </p>
+    <h2>
+        Conclusion
+    </h2>
+    <p>
+        Whether you're just starting or already active in the Ronin network, the
+        wallet is an essential companion. Its clean design, tight security, and
+        platform flexibility make managing your digital assets straightforward and
+        safe.
+    </p>
+    <p>
+        Set it up once, back up your phrase, and you're ready to navigate the full
+        Ronin ecosystem with confidence. The Ronin Wallet isn’t just a tool—it’s
+        your personal access pass to everything that matters in your digital world.
+    </p>
+   
+<div class="accordion width-100 my-4" id="accordionExample">
+  <h2 class="mb-4">FAQs:</h2>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        What features does Ronin offer?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Ronin allows users to manage assets, sign transactions securely, interact with dApps, and even switch between multiple addresses—all within a minimal and easy-to-use interface.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Is Ronin open-source?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Yes, Ronin is open-source, encouraging transparency and ongoing development through community contributions.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        How do I update Ronin?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Updates for Ronin are typically handled through your browser’s extension updates or mobile app store. Just visit the extension settings or app store page and update when prompted.
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+</div> 
+</div> 
+</section> 
+  <script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+    // Disable automatic scroll restoration
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    // Smooth scroll to the top when the page is loaded
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+});
+
+  </script>
+</body>
+</html>
+
+
